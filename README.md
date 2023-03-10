@@ -13,7 +13,7 @@ O projeto foi desenvolvido no Instituto Federal Fluminense - Campus Itaperuna, p
 <b>Equipe:</b>
 
 - Nome: Luiz Claudio Tavares Silva	
-  <br>E-mail: luizctsilva@luizctsilva.adm.br
+  <br>E-mail: luiz.t.silva@iff.edu.br
   <br>Função: Orientador Técnico
 
 - Nome: Alef Ligiero Alvim Garcia Bastos
