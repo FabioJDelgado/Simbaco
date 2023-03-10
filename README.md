@@ -16,7 +16,7 @@ Esse projeto permite ao usuário simular operações básicas da contabilida bá
   <br>Função: Gerente de Projetos
   
 - Nome: Bruno Lessa Ferraz
-  <br>E-mail: 
+  <br>E-mail: brunolessamaxx28@gmail.com
   <br>Função: Desenvolvedor
   
 - Nome: Douglas de Paula Ferreira
@@ -36,11 +36,11 @@ Esse projeto permite ao usuário simular operações básicas da contabilida bá
   <br>Função: Desenvolvedor
   
 - Nome: Raphael Moreira Assis Braga
-  <br>E-mail:
+  <br>E-mail: raphaelmoreira120@gmail.com
   <br>Função: Desenvolvedor
   
-- Nome: Thiago Antunes
-  <br>E-mail:
+- Nome: Thiago Xavier Antunes
+  <br>E-mail: thiaguinhooantunes@gmail.com
   <br>Função: Desenvolvedor
 
 
@@ -48,8 +48,8 @@ Esse projeto permite ao usuário simular operações básicas da contabilida bá
 
 Faça um clone do projeto ou baixe a versão em .zip:
 
- - CLone: git clone https://github.com/seu_usuario/Simbaco.git
- - Zip: https://github.com/seu_usuario/Simbaco/archive/refs/heads/main.zip
+ <pre>Clone: git clone https://github.com/seu_usuario/Simbaco.git</pre>
+ <pre>Zip: https://github.com/seu_usuario/Simbaco/archive/refs/heads/main.zip</pre>
 
 Para executar, basta abrir o arquivo index.html no seu navegador.
 
