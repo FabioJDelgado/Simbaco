@@ -5,7 +5,7 @@
 
 Esse projeto permite ao usuário simular operações básicas da contabilida básica, como cadastrar vários planos de contas e gerenciá-los, podendo adicionar contas, criar movientações, gerar livros razão e diário, e relatórios de DRE e balanço patrimonial. Além disso o usuário pode excluir o plano de contas que desejar ou apenas limpar todas as suas operações, retornando ao seu estado inicial de criação.
 
-<b>Desenvolvimento</b>
+<b>Desenvolvimento:</b>
 
 O projeto foi desenvolvido no Instituto Federal Fluminense - Campus Itaperuna, pela turma do 6° período de Sistemas de Informação, na disciplina de Gerência de Projetos. 
 <br>Todo o projeto foi construído usando as técnicas de projeto prospostas pela a disciplina.
