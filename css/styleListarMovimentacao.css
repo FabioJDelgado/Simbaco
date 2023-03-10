@@ -1,0 +1,47 @@
+body {
+    overflow: hidden;
+}
+
+.div-table {
+    overflow: auto;
+}
+
+.button-content {
+    display: flex;
+    margin-top: 25px;
+    gap: 10px;
+    margin-left: 300px;
+}
+
+.filter {
+    display: flex;
+    gap: 5px;
+}
+
+.container-fluid {
+    display: flex;
+    width: 100%;
+}
+
+.justify-content-center {
+    justify-content: flex-start!important;
+}
+
+.filter button {
+    width: 100px;
+    height: 40px;
+    margin: 20px 0 0 20px;
+}
+
+.initial-date {
+    display: flex;
+    gap: 15px;
+    height: 25px;
+}
+.final-date {
+    display: flex;
+    gap: 22px;
+    height: 25px;
+    margin: 10px 0;
+}
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simbaco</title>
+
+    <!-- importações -->
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/geral.css">
+    <link rel="stylesheet" href="./css/stylePC.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="container-projeto">
+                <h1 class="cabecalho text-center">SIMBACO</h1>
+                <div class="col-md-6 inp-button">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalAddPC">Criar Plano de Contas</button>
+                </div>
+                <div class="div-table">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Plano de Contas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbPlanoContas">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal fade" id="modalAddPC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Novo Plano de Contas</h1>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="nomePC" class="form-label">Nome Plano de Contas:</label>
+                                    <input type="text" class="form-control" id="nomePC" name="nomePC">
+                                </div>
+								<label class="form-label">Adicionar Contas:</label>
+                                <div class="div-add-conta-pc">
+                                    <div class="div-conteudo-modal-add-conta-pc row">
+                                        <div class="col-md-4">
+                                            <label for="codigoConta" class="form-label">Código:</label>
+                                            <input type="text" class="form-control" id="codigoConta" name="codigoConta">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label for="nomeConta" class="form-label">Nome da conta:</label>
+                                            <input type="text" class="form-control" id="nomeConta" name="nomeConta">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="tipoConta" class="form-label">Tipo da conta:</label>
+                                            <select id="tipoConta" class="form-select">
+                                                <option value="">Selecione</option>
+                                                <option value="ATIVO">Ativo</option>
+                                                <option value="PASSIVO">Passivo</option>
+                                                <option value="PLIQUIDO">Patrimônio Líquido</option>
+                                                <option value="RECEITA">Receita</option>
+                                                <option value="DESPESA">Despesa</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="saldoConta" class="form-label">Saldo inicial da conta:</label>
+                                            <input type="text" class="form-control" id="saldoConta" name="saldoConta">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="natSaldoConta" class="form-label">Natureza do saldo:</label>
+                                            <select id="natSaldoConta" class="form-select">
+                                                <option value="">Selecione</option>
+                                                <option value="D">Débito</option>
+                                                <option value="C">Crédito</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-primary" id="addContaPC">Adicionar Conta</button>
+                                        </div>                                       
+                                    </div>
+                                </div>   
+                                <div class="mb-3" id="divContasPC">
+                                    <label class="form-label">Contas:</label>
+                                    <table class="table" id="tblContasPC">
+                                        <thead>
+                                            <tr>
+                                                <th>Código</th>
+                                                <th>Nome</th>
+                                                <th>Tipo</th>
+                                                <th colspan="2" class="text-center">Saldo Inicial</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbContasPC">
+                                        </tbody>
+                                    </table>
+                                </div>                          
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelaAddPC">Cancelar</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="salvaAddPC">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modalEditaPC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Plano de Contas</h1>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="nomePCEditar" class="form-label">Nome Plano de Contas:</label>
+                                    <input type="text" class="form-control" id="nomePCEditar" name="nomePCEditar">
+                                    <input type="hidden" name="idPCEditar" id="idPCEditar">
+                                </div>            
+                                <span><b>Obs.: Só é possível editar o nome do Plano de Contas</b></span>          
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary" id="salvaEdicaoPC">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modalAddContaPC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar Conta ao Plano de Contas: <span id="nomePCAdd"></span></h1>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <input type="hidden" name="idPCNovaConta" id="idPCNovaConta">
+                                    <div class="col-md-4">
+                                        <label for="codigoContaAdd" class="form-label">Código:</label>
+                                        <input type="text" class="form-control" id="codigoContaAdd" name="codigoContaAdd">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label for="nomeContaAdd" class="form-label">Nome da conta:</label>
+                                        <input type="text" class="form-control" id="nomeContaAdd" name="nomeContaAdd">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="tipoContaAdd" class="form-label">Tipo da conta:</label>
+                                        <select id="tipoContaAdd" class="form-select">
+                                            <option value="">Selecione</option>
+                                            <option value="ATIVO">Ativo</option>
+                                            <option value="PASSIVO">Passivo</option>
+                                            <option value="PLIQUIDO">Patrimônio Líquido</option>
+                                            <option value="RECEITA">Receita</option>
+                                            <option value="DESPESA">Despesa</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="saldoContaAdd" class="form-label">Saldo inicial da conta:</label>
+                                        <input type="text" class="form-control" id="saldoContaAdd" name="saldoContaAdd">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="natSaldoContaAdd" class="form-label">Natureza do saldo:</label>
+                                        <select id="natSaldoContaAdd" class="form-select">
+                                            <option value="">Selecione</option>
+                                            <option value="D">Débito</option>
+                                            <option value="C">Crédito</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelarNovaContaPC">Cancelar</button>
+                                <button type="button" class="btn btn-primary" id="salvaNovaContaPC">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modalLimpaPC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Limpar Plano de Contas</h1>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="idLimpaPC" id="idLimpaPC">
+                                Tem certeza que deseja <b>Limpar</b> todas as informações (voltar padrão de quando foi criado) do Plano de contas <span id="nomeLimparPC"></span>?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="salvaLimparPC">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modalExcluiPC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Limpar Plano de Contas</h1>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="idExcluiPC" id="idExcluiPC">
+                                Tem certeza que deseja <b>Excluir</b> do Plano de contas <span id="nomeExcluiPC"></span>?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="salvaExcluiPC">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- importações -->
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/persistencia.js"></script>
+    <script src="./js/jsPC.js"></script>
+</body>
+</html>

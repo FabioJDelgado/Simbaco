@@ -1,0 +1,40 @@
+.inp-button{
+    margin: 10px;
+}
+
+#tbContasPC{
+    text-align: center;
+}
+
+.div-add-conta-pc{
+    border: 1px solid rgb(185, 184, 184);
+    border-radius: 5px;
+}
+
+.div-conteudo-modal-add-conta-pc{
+    padding: 10px;
+}
+
+#divContasPC{
+    display: none;
+}
+
+.td-acao-tbl-pc{
+    width: 20%;   
+}
+
+.td-nome-tbl-pc{
+    width: 80%;
+}
+
+.dist-icones{
+    margin-left: 4px;
+}
+
+thead{
+    text-align: center;
+}
+
+#addContaPC{
+    margin-top: 8px;
+}

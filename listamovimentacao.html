@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Movimentações</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/geral.css">
+    <link rel="stylesheet" href="./css/styleListarMovimentacao.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="container-projeto">
+                <h1 class="cabecalho text-center" id="nomePC">SIMBACO</h1>
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid justify-content-center ">
+                        <div class="filter">
+                            <div class="inputs">
+                                
+                                <div class="initial-date">
+                                    <p>Data Inicial</p>
+                                    <input type="date" name="datainicial" class="datainicial">
+                                </div>
+                            
+                                <div class="final-date">
+                                    <p>Data Final</p>
+                                    <input type="date" name="datafinal" class="datafinal">
+                                </div>
+                            </div>
+                            <button class="btn-filter btn btn-primary d-print-none">Filtrar</button>
+                        </div>
+
+                        <div class="button-content">
+                            <button class="btn btn-sm btn-outline-secondary d-print-none" id = "voltarConta" >Voltar</button>
+                            <button class="btn btn-sm btn-outline-secondary d-print-none" onclick="imprimir()">Imprimir</button>
+                        </div>
+                    </div>
+                </nav>
+                <div class="div-table">
+                    <table class="table table-striped table-movimentation">
+                        <thead>
+                            <tr>
+                                <th colspan="9" class="posicao-text tam-font-titulo_tbl">Movimentações</th>
+                            </tr>
+                            <tr>
+                                <th>Código</th>
+                                <th colspan="4">Descrição</th>
+                                <th>Valor</th>
+                                <th>Data</th>
+                                <th>Conta Débito</th>
+                                <th>Conta Crédito</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbContas">
+                        </tbody>
+                    </table>
+                </div>                 
+            </div>
+        </div>
+    </div>
+
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/persistencia.js"></script>
+    <script src="./js/jsListaMovimentacao.js"></script>
+</body>
+</html>
+
+<!-- Path: jsListaMovimentacao.js   data: 18/01/2023-->
