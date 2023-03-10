@@ -7,7 +7,7 @@ Esse projeto permite ao usuário simular operações básicas da contabilida bá
 
 <b>Desenvolvimento:</b>
 
-O projeto foi desenvolvido no Instituto Federal Fluminense - Campus Itaperuna, pela turma do 6° período de Sistemas de Informação, na disciplina de Gerência de Projetos. 
+O projeto foi desenvolvido no Instituto Federal Fluminense - Campus Itaperuna, pela equipe descrita abaixo do 6° período de Sistemas de Informação, na disciplina de Gerência de Projetos. 
 <br>Todo o projeto foi construído usando as técnicas de projeto prospostas pela a disciplina.
   
 <b>Equipe:</b>
